@@ -9,7 +9,7 @@
         <?php gerarTitulo(); ?>
     </title>
 
-    <!-- <link rel="stylesheet" type="text/css" href="<?php #bloginfo('stylesheet_url') ?>" /> -->
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url') ?>"/>
     
     <link rel="stylesheet" type="text/css" href="<?= $home ?>/assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="<?= $home ?>/assets/css/header.css" />

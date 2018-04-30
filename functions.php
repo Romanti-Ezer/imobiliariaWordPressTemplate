@@ -41,8 +41,31 @@ function registrar_menu_navegacao() {
 
 add_action( 'init', 'registrar_menu_navegacao' );
 
-function gerarTitulO() {
+function gerarTitulo() {
     bloginfo('name');
     if (!is_home()) echo ' | ';
     the_title(); 
 }
+
+function cadastrar_tanoximia_localizacoes(){
+    
+    $nomeSingular = 'Localização';
+    $nomePlural = 'Localizações';
+
+    $labels = array(
+        'name' => $nomePlural,
+        'singular_name' => $nomeSingular,
+        'edit_item' => 'Editar ' . $nomeSingular,
+        'add_new_item'  => 'Adicionar nova ' . $nomeSingular
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'hierarchical' => true
+    );
+
+    register_taxonomy('localizacoes', 'imovel', $args );
+}
+
+add_action('init', 'cadastrar_tanoximia_localizacoes');
